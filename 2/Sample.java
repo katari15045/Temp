@@ -1,16 +1,17 @@
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
 
 public class Sample
 {
 	private static Scanner scanner;
-	private static ArrayList<String> stringArray;
+	private static LinkedHashSet<String> stringSet;
 	private static int length;
 
 	public static void main( String[] args )
 	{
 		takeUserInput();
-		System.out.println( stringArray );
+		System.out.println(stringSet);
+
 	}
 
 	private static void takeUserInput()
@@ -22,13 +23,13 @@ public class Sample
 		System.out.print("Length : ");
 		length = scanner.nextInt();
 		inpString = scanner.nextLine();	// Take new line as input
-		stringArray = new ArrayList<String>(length);
+		stringSet = new LinkedHashSet<String>(length);
 		System.out.println("Enter array elements one in each line.");
 
 		while( count < length )
 		{
 			inpString = scanner.nextLine();
-			stringArray.add( count, inpString );
+			stringSet.add(inpString);
 
 			count = count + 1;
 		}
