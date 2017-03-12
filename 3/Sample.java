@@ -11,7 +11,7 @@ public class Sample
 	public static void main(String[] args)
 	{
 		takeUserInput();
-		removeWord( wordToRemove, originalString );
+		System.out.println( removeWord( wordToRemove, originalString ) );
 	}
 
 	private static void takeUserInput()
@@ -28,8 +28,9 @@ public class Sample
 		// Although the method parametres are not needed(Class variables can be accessed from here), I just want to full fill the problem requirements.
 
 		int startIndex, endIndex;
-		StringBuilder stringBuilder = new StringBuilder(originalString);
+		StringBuilder stringBuilder;
 
+		stringBuilder = new StringBuilder(originalString);
 		startIndex = originalStringLocal.indexOf(wordToRemove);
 
 		if( startIndex == -1 )
@@ -41,8 +42,8 @@ public class Sample
 		endIndex = startIndex + wordToRemove.length() - 1;
 		stringBuilder.delete( startIndex, endIndex+1 );
 		removeExtraSpace(startIndex, endIndex, stringBuilder);
-		System.out.println(stringBuilder);
-		return originalStringLocal;
+
+		return stringBuilder.toString();
 	}
 
 	private static void removeExtraSpace( int startIndex, int endIndex, StringBuilder stringBuilder )
