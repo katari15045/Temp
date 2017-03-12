@@ -1,17 +1,24 @@
 import java.util.Scanner;
 import java.util.LinkedHashSet;
+import java.util.ArrayList;
 
 public class Sample
 {
 	private static Scanner scanner;
 	private static LinkedHashSet<String> stringSet;
+	private static ArrayList<String> arrayList;
 	private static int length;
+
+	private static MergeSort mergeSort;
 
 	public static void main( String[] args )
 	{
 		takeUserInput();
-		System.out.println(stringSet);
-
+		arrayList = new ArrayList<String>(stringSet);
+		mergeSort = new MergeSort(arrayList);
+		mergeSort.startMergeSort();
+		arrayList = mergeSort.getSortedArray();
+		System.out.println(arrayList);
 	}
 
 	private static void takeUserInput()
