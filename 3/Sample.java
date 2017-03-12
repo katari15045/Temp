@@ -40,13 +40,16 @@ public class Sample
 
 		endIndex = startIndex + wordToRemove.length() - 1;
 		stringBuilder.delete( startIndex, endIndex+1 );
+		removeExtraSpace(startIndex, endIndex, stringBuilder);
+		System.out.println(stringBuilder);
+		return originalStringLocal;
+	}
 
+	private static void removeExtraSpace( int startIndex, int endIndex, StringBuilder stringBuilder )
+	{
 		if( endIndex+1 != stringBuilder.length() )
 		{
 			stringBuilder.delete(startIndex, startIndex + 1);
 		}
-
-		System.out.println(stringBuilder);
-		return originalString;
 	}
 }
