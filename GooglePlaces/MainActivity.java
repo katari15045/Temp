@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity
     private LatLngBounds bounds;
     private PlaceAutocomplete.IntentBuilder intentBuilder;
 
-    private TextView textViewResults;
+    private TextView textViewAddress;
+    private TextView textViewMobile;
+    private TextView textViewWebsite;
 
     private String name;
     private String address;
@@ -57,13 +59,15 @@ public class MainActivity extends AppCompatActivity
 
     private void initializeViews()
     {
-        textViewResults = (TextView) findViewById(R.id.textViewResult);
+        textViewAddress = (TextView) findViewById(R.id.textViewAddress);
+        textViewMobile = (TextView) findViewById(R.id.textViewMobile);
+        textViewWebsite = (TextView) findViewById(R.id.textViewWebsite);
     }
 
     private void initializeIntentBuilder()
     {
         bounds = new LatLngBounds(new LatLng(28.390261, 76.574797), new LatLng(28.902470, 77.499016));  // Delhi
-        intentBuilder = new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY);
+        intentBuilder = new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_FULLSCREEN);
         intentBuilder.setBoundsBias(bounds);
     }
 
@@ -86,7 +90,7 @@ public class MainActivity extends AppCompatActivity
             else if (resultCode == PlaceAutocomplete.RESULT_ERROR)
             {
                 status = PlaceAutocomplete.getStatus(this, data);
-                textViewResults.setText( status.toString() );
+                //error
             }
         }
 
@@ -102,13 +106,9 @@ public class MainActivity extends AppCompatActivity
 
     private void displayResults()
     {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Name -> ").append(name).append("\n");
-        stringBuilder.append("Address -> ").append(address).append("\n");
-        stringBuilder.append("Mobile -> ").append(mobile).append("\n");
-        stringBuilder.append("Website -> ").append(website).append("\n");
-
-        textViewResults.setText( stringBuilder.toString() );
+        textViewAddress.setText(address);
+        textViewMobile.setText(mobile);
+        textViewWebsite.setText(website);
     }
 
 
