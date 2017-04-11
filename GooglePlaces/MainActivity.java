@@ -12,6 +12,8 @@ import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity
 
         initializeViews();
         buttonFind.setOnClickListener( new MyListener() );
+
     }
 
     private void initializeViews()
@@ -54,18 +57,24 @@ public class MainActivity extends AppCompatActivity
                 textViewResults.setText( status.toString() );
             }
         }
+
     }
 
     private class MyListener implements View.OnClickListener
     {
+
         private Intent intent;
+        private LatLngBounds bounds;
+        private PlaceAutocomplete.IntentBuilder intentBuilder;
 
         @Override
         public void onClick(View v)
         {
+            initializeIntentBuilder();
+
             try
             {
-                intent = new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_FULLSCREEN).build(MainActivity.this);
+                intent = intentBuilder.build(MainActivity.this);
                 startActivityForResult(intent, 1);
             }
 
@@ -78,6 +87,13 @@ public class MainActivity extends AppCompatActivity
             {
                 e.printStackTrace();
             }
+        }
+
+        private void initializeIntentBuilder()
+        {
+            bounds = new LatLngBounds(new LatLng(28.390261, 76.574797), new LatLng(28.902470, 77.499016));  // Delhi
+            intentBuilder = new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY);
+            intentBuilder.setBoundsBias(bounds);
         }
     }
 
