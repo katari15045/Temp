@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity
     private Button buttonFind;
     private TextView textViewResults;
 
+    private String name;
+    private String address;
+    private String mobile;
+    private String website;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -43,12 +48,14 @@ public class MainActivity extends AppCompatActivity
         Place place;
         Status status;
 
+
         if (requestCode == 1)
         {
             if (resultCode == RESULT_OK)
             {
                 place = PlaceAutocomplete.getPlace(this, data);
-                textViewResults.setText(place.getName()+"\n"+ place.getAddress() +"\n" + place.getPhoneNumber());
+                getData(place);
+                displayResults();
             }
 
             else if (resultCode == PlaceAutocomplete.RESULT_ERROR)
@@ -58,6 +65,25 @@ public class MainActivity extends AppCompatActivity
             }
         }
 
+    }
+
+    private void getData(Place place)
+    {
+        name = place.getName().toString();
+        address = place.getAddress().toString();
+        mobile = place.getPhoneNumber().toString();
+        website = place.getWebsiteUri().toString();
+    }
+
+    private void displayResults()
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Name -> ").append(name).append("\n");
+        stringBuilder.append("Address -> ").append(address).append("\n");
+        stringBuilder.append("Mobile -> ").append(mobile).append("\n");
+        stringBuilder.append("Website -> ").append(website).append("\n");
+
+        textViewResults.setText( stringBuilder.toString() );
     }
 
     private class MyListener implements View.OnClickListener
