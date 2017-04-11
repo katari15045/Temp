@@ -17,7 +17,10 @@ import com.google.android.gms.maps.model.LatLngBounds;
 
 public class MainActivity extends AppCompatActivity
 {
-    private Button buttonFind;
+    private Intent intent;
+    private LatLngBounds bounds;
+    private PlaceAutocomplete.IntentBuilder intentBuilder;
+
     private TextView textViewResults;
 
     private String name;
@@ -32,14 +35,36 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         initializeViews();
-        buttonFind.setOnClickListener( new MyListener() );
+        initializeIntentBuilder();
+
+        try
+        {
+            intent = intentBuilder.build(MainActivity.this);
+            startActivityForResult(intent, 1);
+        }
+
+        catch (GooglePlayServicesRepairableException e)
+        {
+            e.printStackTrace();
+        }
+
+        catch (GooglePlayServicesNotAvailableException e)
+        {
+            e.printStackTrace();
+        }
 
     }
 
     private void initializeViews()
     {
-        buttonFind = (Button) findViewById(R.id.buttonFind);
         textViewResults = (TextView) findViewById(R.id.textViewResult);
+    }
+
+    private void initializeIntentBuilder()
+    {
+        bounds = new LatLngBounds(new LatLng(28.390261, 76.574797), new LatLng(28.902470, 77.499016));  // Delhi
+        intentBuilder = new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY);
+        intentBuilder.setBoundsBias(bounds);
     }
 
     @Override
@@ -86,41 +111,5 @@ public class MainActivity extends AppCompatActivity
         textViewResults.setText( stringBuilder.toString() );
     }
 
-    private class MyListener implements View.OnClickListener
-    {
-
-        private Intent intent;
-        private LatLngBounds bounds;
-        private PlaceAutocomplete.IntentBuilder intentBuilder;
-
-        @Override
-        public void onClick(View v)
-        {
-            initializeIntentBuilder();
-
-            try
-            {
-                intent = intentBuilder.build(MainActivity.this);
-                startActivityForResult(intent, 1);
-            }
-
-            catch (GooglePlayServicesRepairableException e)
-            {
-                e.printStackTrace();
-            }
-
-            catch (GooglePlayServicesNotAvailableException e)
-            {
-                e.printStackTrace();
-            }
-        }
-
-        private void initializeIntentBuilder()
-        {
-            bounds = new LatLngBounds(new LatLng(28.390261, 76.574797), new LatLng(28.902470, 77.499016));  // Delhi
-            intentBuilder = new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY);
-            intentBuilder.setBoundsBias(bounds);
-        }
-    }
 
 }

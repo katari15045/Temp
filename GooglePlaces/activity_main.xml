@@ -15,14 +15,6 @@
         android:layout_gravity="center"
         tools:context="com.example.root.googleplaces.MainActivity">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/buttonFind"
-            android:text="Find"
-            android:textAllCaps="false"
-            />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
