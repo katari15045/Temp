@@ -21,7 +21,9 @@
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_gravity="center"
             map:cameraZoom="15"
             tools:context="com.example.root.googlemap.MapsActivity" />
@@ -116,9 +118,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonBackToSearch"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
             android:text="Back to search"
             android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
             />
 
     </LinearLayout>

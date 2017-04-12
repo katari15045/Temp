@@ -2,8 +2,10 @@ package com.example.root.googleplaces;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,10 +21,9 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback
 {
     private GoogleMap mMap;
     private Place place;
@@ -34,6 +35,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private TextView textViewMobile;
     private TextView textViewWebsite;
     private Button buttonBackToSearch;
+    private ActionBar actionBar;
 
     private String name;
     private String address;
@@ -159,7 +161,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void initializeDefaultValues()
     {
-        name = "Unavailable";
+        name = "Target";
         address = "Unavailable";
         mobile = "Unavailable";
         website = "Unavailable";
@@ -174,10 +176,18 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void displayResults()
     {
+        customizeActionBar();
         textViewAddress.setText(address);
         textViewMobile.setText(mobile);
         textViewWebsite.setText(website);
     }
+
+    private void customizeActionBar()
+    {
+        actionBar = getSupportActionBar();
+        actionBar.setTitle(name);
+    }
+
 
 
 }
