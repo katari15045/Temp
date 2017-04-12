@@ -1,6 +1,7 @@
 package com.example.root.googleplaces;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,11 +13,18 @@ import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 {
+    private GoogleMap mMap;
+    private Place place;
     private Intent intent;
     private LatLngBounds bounds;
     private PlaceAutocomplete.IntentBuilder intentBuilder;
@@ -29,6 +37,7 @@ public class MainActivity extends AppCompatActivity
     private String address;
     private String mobile;
     private String website;
+    private LatLng latLng;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -74,7 +83,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        Place place;
         Status status;
 
 
@@ -84,6 +92,7 @@ public class MainActivity extends AppCompatActivity
             {
                 place = PlaceAutocomplete.getPlace(this, data);
                 getData(place);
+                initializeMap();
                 displayResults();
             }
 
@@ -93,15 +102,57 @@ public class MainActivity extends AppCompatActivity
                 //error
             }
         }
+    }
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        latLng = place.getLatLng();
+        mMap.addMarker(new MarkerOptions().position(latLng).title("Marker at Target"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
     }
 
     private void getData(Place place)
     {
-        name = place.getName().toString();
-        address = place.getAddress().toString();
-        mobile = place.getPhoneNumber().toString();
-        website = place.getWebsiteUri().toString();
+        initializeDefaultValues();
+
+        if( place.getName() != null )
+        {
+            name = place.getName().toString();
+        }
+
+        if( place.getAddress() != null )
+        {
+            address = place.getAddress().toString();
+        }
+
+        if( place.getPhoneNumber() != null )
+        {
+            mobile = place.getPhoneNumber().toString();
+        }
+
+        if( place.getWebsiteUri() != null )
+        {
+            website = place.getWebsiteUri().toString();
+        }
+
+    }
+
+    private void initializeDefaultValues()
+    {
+        name = "Unavailable";
+        address = "Unavailable";
+        mobile = "Unavailable";
+        website = "Unavailable";
+    }
+
+
+    private void initializeMap()
+    {
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
     private void displayResults()
