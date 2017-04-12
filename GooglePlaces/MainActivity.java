@@ -19,6 +19,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback
@@ -32,6 +33,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private TextView textViewAddress;
     private TextView textViewMobile;
     private TextView textViewWebsite;
+    private Button buttonBackToSearch;
 
     private String name;
     private String address;
@@ -47,6 +49,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         initializeViews();
         initializeIntentBuilder();
+        handleButtonClick();
 
         try
         {
@@ -71,6 +74,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         textViewAddress = (TextView) findViewById(R.id.textViewAddress);
         textViewMobile = (TextView) findViewById(R.id.textViewMobile);
         textViewWebsite = (TextView) findViewById(R.id.textViewWebsite);
+        buttonBackToSearch = (Button) findViewById(R.id.buttonBackToSearch);
     }
 
     private void initializeIntentBuilder()
@@ -79,6 +83,20 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         intentBuilder = new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_FULLSCREEN);
         intentBuilder.setBoundsBias(bounds);
     }
+
+    private void handleButtonClick()
+    {
+        buttonBackToSearch.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                mMap.clear();
+                startActivityForResult(intent, 1);
+            }
+        });
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
