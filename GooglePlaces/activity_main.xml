@@ -23,6 +23,7 @@
             android:layout_height="200dp"
             android:layout_margin="20dp"
             android:layout_gravity="center"
+            map:cameraZoom="15"
             tools:context="com.example.root.googlemap.MapsActivity" />
 
         <LinearLayout
