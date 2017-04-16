@@ -1,0 +1,4 @@
+-> $java -version
+-> if you see - The program 'java' can be found in the following packages: then you need to install Java
+-> $sudo apt-get install default-jdk$ This installs Java Development Kit which includes JRE, compilers, debugger etc.
+-> $java -version$ This shows the installed version
