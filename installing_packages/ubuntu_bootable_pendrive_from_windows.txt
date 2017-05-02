@@ -1,0 +1,3 @@
+-> Download Rufus from https://rufus.akeo.ie/
+-> Select "MBR Partition scheme for BIOS or UEFI" under "Partition scheme and target system".
+-> Choose ISO image and burn it.
