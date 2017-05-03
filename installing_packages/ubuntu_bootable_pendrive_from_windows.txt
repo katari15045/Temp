@@ -1,3 +1,4 @@
 -> Download Rufus from https://rufus.akeo.ie/
 -> Select "MBR Partition scheme for BIOS or UEFI" under "Partition scheme and target system".
 -> Choose ISO image and burn it.
+-> After Ubuntu installation the free space was 142.1 GB / 149 GB
