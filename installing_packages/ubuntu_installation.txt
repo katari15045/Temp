@@ -1,12 +1,10 @@
-OS -> Ubuntu 17.04
-Free space on Disk -> 291.8 GB / 320 GB
-Time taken -> 20 to 25 minutes
-
-How did I install?
------------------
 -> Take a pendrive(atleast 2 GB) and format it.
 -> Download latest ubuntu iso image(17.04) 
 -> Open startup disk creator(on Ubuntu) and burn the downloaded iso file on the pendrive.
 -> Insert the pendrive and restart your system(read next point before doing this)
 -> while booting press f12 to enter boot menu and choose USB.
--> That's it. It took me 20 minutes to install Ubuntu.
+
+OS -> Ubuntu 17.04
+Free space on Disk -> 291.8 GB / 320 GB
+Time taken -> 20 to 25 minutes
+
