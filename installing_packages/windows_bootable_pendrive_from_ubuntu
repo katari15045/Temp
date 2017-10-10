@@ -1,5 +1,13 @@
 -> $sudo add-apt-repository ppa:nilarimogard/webupd8
 -> $sudo apt update
 -> $sudo apt install winusb
+
+Method-1 (tried on 10th Oct, 2017 & it worked)
+-----------------------------------------------
+-> Open disks app; select the pendrive; delete all the partitions; remember the mount point of the pendrive (say /dev/sdb)
+-> sudo woeusb --device ~/Documents/en_windows_10_education_version_1703_updated_march_2017_x64_dvd_10189297.iso  /dev/sdb
+
+Method-2 (Tried long back)
+---------------------------
 -> Format your USB
 -> $gksudo winusbgui
