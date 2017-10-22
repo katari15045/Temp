@@ -74,8 +74,16 @@ Finally, it is converted to a binary string '01100001, 01100010, 01100011'.\\
 Similarly, another binary string is produced for the confidential data.\\
 
 \subsection{Embedding}
+Each bit is taken from the 'confidential data' and from the 'location data'.
+Let them be c\_bit and l\_bit respectively.
+c\_bit is embedded in one of the components of a pixel which is determined by l\_bit.\\
 
+It is observerd that the human eye is most sensitive to the green component of the light.
+So, LSBs of green component are not replaced.\\
 
+A pixel is chosen in lexicographical order (row\_number, column\_number in lexicographical order).
+For a given l\_bit and c\_bit, l\_bit is XORed with LSB of green component.
+If it gives 0, LSB of blue is replaced with c\_bit, else, LSB of red is replaced with c\_bit.\\
 \subsection{\LaTeX-Specific Advice}
 
 Please use ``soft'' (e.g., \verb|\eqref{Eq}|) cross references instead
