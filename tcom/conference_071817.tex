@@ -25,15 +25,25 @@ katari15045@iiitd.ac.in}
 \begin{abstract}
 This document explains a new strategy to transfer confidential data by combining steganography with cryptography.
 LSB steganography is further improved by randomly storing confidential data in an image which makes it difficult to retrieve.
-Human visual system is considered in this approach; making user difficult to detect the changes in stego image. \\
+Considering human visual system, it is difficult for the user to detect the changes in stego image. \\
 \end{abstract} 
 
 \begin{IEEEkeywords}
-steganography, lsb, image, cryptography, random
+steganography, LSB, image, cryptography, random
 \end{IEEEkeywords}
 
 \section{Introduction}
+Confidential data is everywhere and it is necessary to transfer it securely over internet.
+Cryptography comes into picture when the data is with you but nothing is made out of it, as it is a cipher, making no sense.
+Steganography hides confidential data within some other data (say image) and makes it difficult to even detect that there is a secret here.
+Cryptography combined with steganography provides a 2 layer protection - detecting the confidential data (steganography) and making sense out of it (Cryptography).\\
 
+Most of the traditional LSB steganography techniques store the confidential data in the LSBs (Least Significant Bit) of every pixel without any randomization. 
+This is not secure because, an attacker might just access the LSBs of every pixel and retrieve the confidential data. 
+Instead, some randomization is necessary while embedding data so that, when an attacker tries to retrieve data, it is difficult to produce the same pattern that was randomly generated.\\
+
+Random pattern that is followed while embedding data should be available at the destination to retrieve the same data
+i.e it is necessary to transfer the random pattern that is generated to the destination.\\
 \section{Ease of Use}
 
 \subsection{Maintaining the Integrity of the Specifications}
