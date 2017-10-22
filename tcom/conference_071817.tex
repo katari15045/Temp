@@ -56,44 +56,25 @@ The performance of a method or an algorithm is evaluated on the basis of the cha
 An algorithm is considered better if it produces minimal change in the image after embedding data in it.\\
 
 \section{Proposed model}
-Before you begin to format your paper, first write and save the content as a 
-separate text file. Complete all content and organizational editing before 
-formatting. Please note sections \ref{AA}-- below for more information on 
-proofreading, spelling and grammar.
+This model adds cryptography and randomization to the traditional LSB steganographic techniques.
 
-Keep your text and graphic files separate until after the text has been 
-formatted and styled. Do not number text heads---{\LaTeX} will do that 
-for you.
+\subsection{Notation}
+Cover image - The image (before embedding) that is supposed to carry the confidential data in it. \\ \\
+Stego image - The image (after embedding) that contains confidential data in it. \\ \\
+confidential data - The data that is to be tranferred securely. \\ \\
+location data - Meta data (Data about confidential data) that identifies the location of confidential data within a stego image. \\ \\
+Component of a pixel - The Red, Green and the Blue components (RGB). \\ \\
+LSB - Least Significant Bit of a binary number. \\ \\
 
-\subsection{Abbreviations and Acronyms}\label{AA}
-Define abbreviations and acronyms the first time they are used in the text, 
-even after they have been defined in the abstract. Abbreviations such as 
-IEEE, SI, MKS, CGS, ac, dc, and rms do not have to be defined. Do not use 
-abbreviations in the title or heads unless they are unavoidable.
+\subsection{Pre-processing}
+A random location data is generated with necessary length. Let it be 'abc'.
+This is converted to 8-bit ASCII values '97, 98, 99'.
+Finally, it is converted to a binary string '01100001, 01100010, 01100011'.\\
 
-\subsection{Units}
-\begin{itemize}
-\item Use either SI (MKS) or CGS as primary units. (SI units are encouraged.) English units may be used as secondary units (in parentheses). An exception would be the use of English units as identifiers in trade, such as ``3.5-inch disk drive''.
-\item Avoid combining SI and CGS units, such as current in amperes and magnetic field in oersteds. This often leads to confusion because equations do not balance dimensionally. If you must use mixed units, clearly state the units for each quantity that you use in an equation.
-\item Do not mix complete spellings and abbreviations of units: ``Wb/m\textsuperscript{2}'' or ``webers per square meter'', not ``webers/m\textsuperscript{2}''. Spell out units when they appear in text: ``. . . a few henries'', not ``. . . a few H''.
-\item Use a zero before decimal points: ``0.25'', not ``.25''. Use ``cm\textsuperscript{3}'', not ``cc''.)
-\end{itemize}
+Similarly, another binary string is produced for the confidential data.\\
 
-\subsection{Equations}
-Number equations consecutively. To make your 
-equations more compact, you may use the solidus (~/~), the exp function, or 
-appropriate exponents. Italicize Roman symbols for quantities and variables, 
-but not Greek symbols. Use a long dash rather than a hyphen for a minus 
-sign. Punctuate equations with commas or periods when they are part of a 
-sentence, as in:
-\begin{equation}
-a+b=\gamma\label{eq}
-\end{equation}
+\subsection{Embedding}
 
-Be sure that the 
-symbols in your equation have been defined before or immediately following 
-the equation. Use ``\eqref{eq}'', not ``Eq.~\eqref{eq}'' or ``equation \eqref{eq}'', except at 
-the beginning of a sentence: ``Equation \eqref{eq} is . . .''
 
 \subsection{\LaTeX-Specific Advice}
 
