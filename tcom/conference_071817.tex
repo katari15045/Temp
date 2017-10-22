@@ -38,25 +38,24 @@ Cryptography comes into picture when the data is with you but nothing is made ou
 Steganography hides confidential data within some other data (say image) and makes it difficult to even detect that there is a secret here.
 Cryptography combined with steganography provides a 2 layer protection - detecting the confidential data (steganography) and making sense out of it (Cryptography).\\
 
+Images are used (among audio, video, text etc) as a medium to store the confidential data.
+Any data such as text, image, audio etc can be embedded in an image and is tranferred to the destination.
+If an attacker sees this image, it would be difficult to detect that there is some hidden data in it, as it looks lika a normal image.\\
+
+\section{Related work}
 Most of the traditional LSB steganography techniques store the confidential data in the LSBs (Least Significant Bit) of every pixel without any randomization. 
 This is not secure because, an attacker might just access the LSBs of every pixel and retrieve the confidential data. 
 Instead, some randomization is necessary while embedding data so that, when an attacker tries to retrieve data, it is difficult to produce the same pattern that was randomly generated.\\
 
-Random pattern that is followed while embedding data should be available at the destination to retrieve the same data
-i.e it is necessary to transfer the random pattern that is generated to the destination.\\
-\section{Ease of Use}
+However, it is necessary to transfer the random pattern to the destination to retrieve data that is embedded. \\
 
-\subsection{Maintaining the Integrity of the Specifications}
+During the process of embedding data in an image, the LSBs of some pixels are modified which modifies the image.
+As the LSB of any binary number corresponds to 0 or 1, it has very less effect (changes by 1) on the overall value.\\ 
 
-The IEEEtran class file is used to format your paper and style the text. All margins, 
-column widths, line spaces, and text fonts are prescribed; please do not 
-alter them. You may note peculiarities. For example, the head margin
-measures proportionately more than is customary. This measurement 
-and others are deliberate, using specifications that anticipate your paper 
-as one part of the entire proceedings, and not as an independent document. 
-Please do not revise any of the current designations.
+The performance of a method or an algorithm is evaluated on the basis of the change in the image before and after embedding data in it.
+An algorithm is considered better if it produces minimal change in the image after embedding data in it.\\
 
-\section{Prepare Your Paper Before Styling}
+\section{Proposed model}
 Before you begin to format your paper, first write and save the content as a 
 separate text file. Complete all content and organizational editing before 
 formatting. Please note sections \ref{AA}-- below for more information on 
