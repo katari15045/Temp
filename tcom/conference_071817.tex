@@ -109,8 +109,13 @@ Now, stego\_image along with location\_data is transferred to destination.
 Stego\_image is first decrypted using the pr\_key\_dest and then with the pub\_key\_src.
 Now, the receiver has the decrypted stego\_image .\\
 
+Similarly, decrypt the location\_data. \\
 \subsection{Extracting embedded data}
+A pixel is chosen in lexicographical order (row\_number, column\_number in lexicographical order).
+For each bit l\_bit in location\_data, XOR l\_bit with the LSB of the green component.
+If it's 0, append the LSB of blue to the confidential\_data, else, append the LSB of red to the confidential\_data.\\
 
+Convert confidential\_data to 8-bit ASCII values and finally to ASCII characters.\\
 
 \subsection{Identify the Headings}
 Headings, or heads, are organizational devices that guide the reader through 
