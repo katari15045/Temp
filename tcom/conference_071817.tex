@@ -100,7 +100,7 @@ pub\_key\_src - Sender's public key \\
 pub\_key\_dest - Receiver's public key \\
 
 \subsection{Pre-processing}
-A random location\_data is generated with necessary length. Let it be 'abc'.
+A random location\_data is generated with necessary length (typically, equal to the size of confidential\_data). Let it be 'abc'.
 This is converted to 8-bit ASCII values '97, 98, 99'.
 Finally, it is converted to a binary string '01100001, 01100010, 01100011'.\\
 
@@ -156,8 +156,20 @@ Similarly, decrypt the location\_data. \\
 A pixel is chosen in lexicographical order (row\_number, column\_number in lexicographical order).
 For each bit l\_bit in location\_data, XOR l\_bit with the LSB of the green component.
 If it's 0, append the LSB of blue to the confidential\_data, else, append the LSB of red to the confidential\_data.\\
+\\ \\
+\centerline{l\_bit - 1}
+\leavevmode \\ \\
+\centerline{Pixel - }
+\centerline{R(10010111)}
+\centerline{G(0110111\textbf{0})}
+\centerline{B(01101010)}
+\leavevmode \\ \\
+\centerline{c\_bit = LSB\_of\_Green \textbf{XOR} l\_bit}
+\centerline{ = 0 \textbf{XOR} 1 = 1 i.e LSB of red component = 1 }
+\leavevmode \\ \\
 
-Convert confidential\_data to 8-bit ASCII values and finally to ASCII characters.\\
+Similarly, construct the whole confidential\_data which results in a binary string.
+Convert this binary string to 8-bit ASCII values and finally to ASCII characters.\\
 \subsection{PSNR (Peak Signal to Noise Ratio)}
 As name indicates, it is the ratio of signal to noise.
 Higher the PSNR lesser the noise in an image.\\
