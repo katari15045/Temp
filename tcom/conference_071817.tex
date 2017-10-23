@@ -79,7 +79,7 @@ An algorithm is considered better if it produces minimal change in the image aft
 
 \section{Proposed model}
 This model adds cryptography and randomization to the traditional LSB steganographic techniques.
-
+\\
 \subsection{Notation}
 Cover\_image - The image (before embedding) that is supposed to carry the confidential data in it. \\
 
@@ -98,6 +98,42 @@ pr\_key\_dest - Receiver's private key \\
 pub\_key\_src - Sender's public key \\
 
 pub\_key\_dest - Receiver's public key \\
+\subsection{Overview}
+\leavevmode \\ \\
+\centerline{Cover Image + Confidential data + Location data}
+\leavevmode \\ \\
+\centerline{$\downarrow$}
+\leavevmode \\ \\
+\centerline{ Stego image }
+\leavevmode \\ \\
+\centerline{$\downarrow$}
+\leavevmode \\ \\
+\centerline{ Encrypted Stego image }
+\leavevmode \\ \\
+\centerline{ Location Data \\ {$\rightarrow$} \\ Encrypted location data}
+\leavevmode \\ \\
+\centerline{---------------------------} 
+\leavevmode \\ \\
+\centerline{ Encrypted stego image + Encrypted location data }
+\leavevmode \\ \\
+\centerline{$\downarrow$}
+\centerline{Internet}
+\leavevmode \\ \\
+\centerline{$\downarrow$}
+\centerline{Destination}
+\leavevmode \\ \\
+\centerline{---------------------------} 
+\leavevmode \\ \\
+\centerline{ Encrypted data }
+\leavevmode \\ \\
+\centerline{$\downarrow$}
+\leavevmode \\ \\
+\centerline{ Decrypted stego image + decrypted location data }
+\leavevmode \\ \\
+\centerline{$\downarrow$}
+\leavevmode \\ \\
+\centerline{ Confidential data }
+\leavevmode \\ \\
 
 \subsection{Pre-processing}
 A random location\_data is generated with necessary length (typically, equal to the size of confidential\_data). Let it be 'abc'.
