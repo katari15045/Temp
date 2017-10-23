@@ -35,13 +35,13 @@ steganography, LSB, image, cryptography, random
 
 \section{Introduction}
 Confidential data is everywhere and it is necessary to transfer it securely over internet.
-Cryptography comes into picture when the data is with you but nothing is made out of it, as it is a cipher, making no sense.
-Steganography hides confidential data within some other data (say image) and makes it difficult to even detect that there is a secret here.
+Cryptography comes into picture when the data is with you but nothing can be made out of it, as it is a cipher, making no sense.
+Steganography hides confidential data within some other data (say image) and makes it difficult to even detect that there is a secret in it.
 Cryptography combined with steganography provides a 2 layer protection - detecting the confidential data (steganography) and making sense out of it (Cryptography).\\
 
 Images are used (among audio, video, text etc) as a medium to store the confidential data.
 Any data such as text, image, audio etc can be embedded in an image and is tranferred to the destination.
-If an attacker sees this image, it would be difficult to detect that there is some hidden data in it, as it looks lika a normal image.\\
+If an attacker gets this image, it would be difficult to detect that there is some hidden data in it, as it looks lika a normal image.\\
 
 \section{Related work}
 Most of the traditional LSB steganography techniques store the confidential data in the LSBs (Least Significant Bit) of every pixel without any randomization, as shown below
@@ -124,11 +124,11 @@ pub\_key\_dest - Receiver's public key \\
 \leavevmode \\ \\
 \centerline{---------------------------} 
 \leavevmode \\ \\
-\centerline{ Encrypted data }
+\centerline{ Encrypted stego image + Encrypted location data }
 \leavevmode \\ \\
 \centerline{$\downarrow$}
 \leavevmode \\ \\
-\centerline{ Decrypted stego image + decrypted location data }
+\centerline{ Decrypted stego image + Decrypted location data }
 \leavevmode \\ \\
 \centerline{$\downarrow$}
 \leavevmode \\ \\
@@ -140,8 +140,7 @@ A random location\_data is generated with necessary length (typically, equal to 
 This is converted to 8-bit ASCII values '97, 98, 99'.
 Finally, it is converted to a binary string '01100001, 01100010, 01100011'.\\
 
-Similarly, another binary string is produced for the confidential\_data.\\
-
+Similarly, another binary string is produced for the confidential\_data.
 \subsection{Embedding}
 
 \begin{figure}[H]
@@ -170,15 +169,15 @@ If it gives 0, LSB of blue is replaced with c\_bit, else, LSB of red is replaced
 As you can see in Fig.2, it is difficult to distinguish between the left (before embedding confidential\_data) and right images (after embedding confidential\_data)
 
 \subsection{Encryption}
-Stego\_image is first encrypted by the pr\_key\_src and then encrypted with the pub\_key\_dest.
+Stego\_image is first encrypted with the pr\_key\_src and then with the pub\_key\_dest.
 Encrypting with pr\_key\_src is referred as a digital signature.
-pub\_key\_dest makes sure that only destination can decrypt it with it's private key \cite{b2}.\\
+Encrypting with pub\_key\_dest makes sure that only the intended user can decrypt it with his/her private key \cite{b2}.\\
 
 \centerline{ pub\_key\_dest ( pr\_key\_src ( data ) ) }
 \leavevmode \\
 Similarly, location\_data is encrypted.\\
 
-Now, stego\_image along with location\_data is transferred to destination.
+Now, encrypted\_stego\_image along with encrypted\_location\_data is transferred to destination.
 
 \subsection{Decrpytion}
 Stego\_image is first decrypted using the pr\_key\_dest and then with the pub\_key\_src.

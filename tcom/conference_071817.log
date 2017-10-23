@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.21)  23 OCT 2017 19:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.21)  23 OCT 2017 20:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -630,40 +630,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--142
 
  []
 
-
-Underfull \hbox (badness 2913) in paragraph at lines 143--144
-[]\OT1/ptm/m/n/10 Similarly, an-other bi-nary string is pro-duced for the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
- []
-
 <cover_image_cum_confidential_data.png, id=10, 551.05875pt x 396.48125pt>
 File: cover_image_cum_confidential_data.png Graphic file (type png)
 
 <use cover_image_cum_confidential_data.png>
 Package pdftex.def Info: cover_image_cum_confidential_data.png used on input li
-ne 148.
+ne 147.
 (pdftex.def)             Requested size: 252.0pt x 181.31276pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--157
+Underfull \hbox (badness 10000) in paragraph at lines 153--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--160
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--164
+Underfull \hbox (badness 10000) in paragraph at lines 160--163
 
  []
 
@@ -671,155 +661,160 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--164
 File: cover_image_vs_stego_image.png Graphic file (type png)
 
 <use cover_image_vs_stego_image.png>
-Package pdftex.def Info: cover_image_vs_stego_image.png used on input line 166.
+Package pdftex.def Info: cover_image_vs_stego_image.png used on input line 165.
 
 (pdftex.def)             Requested size: 252.0pt x 115.50119pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2 <./cover_image_cum_confidential_data.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 173--176
+Underfull \hbox (badness 10000) in paragraph at lines 172--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--180
+Underfull \hbox (badness 10000) in paragraph at lines 177--179
 
  []
 
 
-Underfull \hbox (badness 2073) in paragraph at lines 184--186
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+[]\OT1/ptm/m/n/10 Now, en-crypted[]stego[]image along with en-
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 183--185
 []\OT1/ptm/m/n/10 Stego[]image is first de-crypted us-ing the pr[]key[]dest
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
+Underfull \hbox (badness 10000) in paragraph at lines 183--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
 
-Underfull \hbox (badness 2582) in paragraph at lines 192--206
+Underfull \hbox (badness 2582) in paragraph at lines 191--205
 \OT1/ptm/m/n/10 col-umn[]number in lex-i-co-graph-i-cal or-der). For each bit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--206
+Underfull \hbox (badness 10000) in paragraph at lines 191--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--206
+Underfull \hbox (badness 10000) in paragraph at lines 191--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--206
+Underfull \hbox (badness 10000) in paragraph at lines 191--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--206
+Underfull \hbox (badness 10000) in paragraph at lines 191--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--206
+Underfull \hbox (badness 10000) in paragraph at lines 191--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--206
+Underfull \hbox (badness 10000) in paragraph at lines 191--205
 
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 207--209
+Underfull \hbox (badness 1565) in paragraph at lines 206--208
 []\OT1/ptm/m/n/10 Similarly, con-struct the whole con-fi-den-tial[]data which
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--209
+Underfull \hbox (badness 10000) in paragraph at lines 206--208
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--212
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--215
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
 
  []
 
 
-Underfull \hbox (badness 3679) in paragraph at lines 216--217
+Underfull \hbox (badness 3679) in paragraph at lines 215--216
 []\OT1/ptm/m/n/10 It has two lay-ers of se-cu-rity - steganog-ra-phy and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--220
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--225
+Underfull \hbox (badness 10000) in paragraph at lines 220--224
 []\OT1/ptm/m/n/10 Traditional LSB steganog-ra-phy tech-nique has been
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--225
+Underfull \hbox (badness 10000) in paragraph at lines 220--224
 
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 221--225
+Underfull \hbox (badness 3895) in paragraph at lines 220--224
 \OT1/ptm/m/n/10 pat-tern that is used to em-bed con-fi-den-tial[]data in a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--225
+Underfull \hbox (badness 10000) in paragraph at lines 220--224
 
  []
 
 
-Underfull \hbox (badness 5878) in paragraph at lines 226--227
+Underfull \hbox (badness 5878) in paragraph at lines 225--226
 \OT1/ptm/m/n/10 301A]' staff and IIIT-Delhi (In-draprastha In-sti-tute of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 230--231
+Underfull \hbox (badness 3525) in paragraph at lines 229--230
 \OT1/ptm/m/n/8 cryp-tog-ra-phy". Com-puter and In-for-ma-tion Sci-ence (ICIS), 
 2016
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
 
@@ -849,7 +844,7 @@ nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on conference_071817.pdf (3 pages, 276168 bytes).
+Output written on conference_071817.pdf (3 pages, 276250 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream
