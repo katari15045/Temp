@@ -44,14 +44,35 @@ Any data such as text, image, audio etc can be embedded in an image and is tranf
 If an attacker sees this image, it would be difficult to detect that there is some hidden data in it, as it looks lika a normal image.\\
 
 \section{Related work}
-Most of the traditional LSB steganography techniques store the confidential data in the LSBs (Least Significant Bit) of every pixel without any randomization. 
-This is not secure because, an attacker might just access the LSBs of every pixel and retrieve the confidential data. 
+Most of the traditional LSB steganography techniques store the confidential data in the LSBs (Least Significant Bit) of every pixel without any randomization, as shown below
+\cite{b1}. 
+\\ \\
+\centerline{ Confidential data }
+\centerline{ 100110011 }
+\leavevmode \\ \\ \\
+\centerline{ Pixels before embedding confidential data }
+\leavevmode \\ \\
+\centerline{ R \\ G \\ B }
+\centerline{ 10010110 \\ 01101111 \\ 01101011 }
+\centerline{ 01011100 \\ 11000110 \\ 01000011 }
+\centerline{ 10111111 \\ 11100110 \\ 00101110 }
+\leavevmode \\ \\ \\
+\centerline{ Pixels after embedding confidential data }
+\leavevmode \\ \\
+\centerline{ R \\ G \\ B }
+\centerline{ 1001011\textbf{1} \\ 0110111\textbf{0} \\ 0110101\textbf{0} }
+\centerline{ 0101110\textbf{1} \\ 1100011\textbf{1} \\ 0100001\textbf{0} }
+\centerline{ 1011111\textbf{0} \\ 1110011\textbf{1} \\ 0010111\textbf{1} }
+\leavevmode \\ \\
+
+During this process, the LSBs of some pixels are replaced, which modifies the image.
+LSB has less effect (changes by 1) on the overall value; hence it is modified instead of MSB.\\ 
+
+However, this is not secure because, an attacker might just access the LSBs of every pixel and retrieve the confidential data. 
 Instead, some randomization is necessary while embedding data so that, when an attacker tries to retrieve data, it is difficult to produce the same pattern that was randomly generated.\\
 
-However, it is necessary to transfer the random pattern to the destination to retrieve data that is embedded. \\
+It is necessary to transfer the random pattern to the destination to retrieve data that is embedded. \\
 
-During the process of embedding data in an image, the LSBs of some pixels are modified which modifies the image \cite{b1}.
-As the LSB of any binary number corresponds to 0 or 1, it has very less effect (changes by 1) on the overall value.\\ 
 
 The performance of a method or an algorithm is evaluated on the basis of the change in the image before and after embedding data in it.
 An algorithm is considered better if it produces minimal change in the image after embedding data in it.\\
@@ -149,12 +170,12 @@ It has two layers of security - steganography and cryptography.\\
 It's difficult to detect confidential\_data that is embedded in an image.
 If an attacker somehow gets encrypted data, it's difficult to decrypt it.\\
 \section{Conclusion}
-LSB steganography has been improved in three ways -\\ \\
+Traditional LSB steganography technique has been improved in three ways -\\ \\
 1. Two way security with cryptography.\\
-2. It's difficult for an attacker to predict the random pattern that is used to embed confidential\_data.\\
+2. Making it difficult for an attacker to predict the random pattern that is used to embed confidential\_data in a cover\_image.\\
 3. PSNR is increased from 53 db to 56 db.\\
 \section*{Acknowledgment}
-I would like to thank 'Technical Communication' staff and IIIT-Delhi (Indraprastha Institute of Information Technology).\\
+I would like to thank 'Technical Communication [COM 301A]' staff and IIIT-Delhi (Indraprastha Institute of Information Technology).\\
 
 \begin{thebibliography}{00}
 \bibitem{b1} S. M. Masud Karim, Md. Saifur Rahman, Md. Ismail Hossain, "A new approach for LSB based image steganography using secret key".  Computer and Information Technology (ICCIT), 2011 14th International Conference, 22-24 Dec. 2011, Dhaka, Bangladesh.\\
