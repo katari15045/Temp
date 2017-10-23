@@ -49,7 +49,7 @@ Instead, some randomization is necessary while embedding data so that, when an a
 
 However, it is necessary to transfer the random pattern to the destination to retrieve data that is embedded. \\
 
-During the process of embedding data in an image, the LSBs of some pixels are modified which modifies the image.
+During the process of embedding data in an image, the LSBs of some pixels are modified which modifies the image \cite{b1}.
 As the LSB of any binary number corresponds to 0 or 1, it has very less effect (changes by 1) on the overall value.\\ 
 
 The performance of a method or an algorithm is evaluated on the basis of the change in the image before and after embedding data in it.
@@ -89,17 +89,17 @@ Each bit is taken from the confidential\_data and from the location\_data.
 Let them be c\_bit and l\_bit respectively.
 c\_bit is embedded in one of the components of a pixel which is determined by l\_bit.\\
 
-It is observerd that the human eye is most sensitive to the green component of the light.
+It is observerd that the human eye is most sensitive to the green component of the light \cite{b2}.
 So, LSBs of green component are not replaced.\\
 
 A pixel is chosen in lexicographical order (row\_number, column\_number in lexicographical order).
 For a given l\_bit and c\_bit, l\_bit is XORed with LSB of green component.
-If it gives 0, LSB of blue is replaced with c\_bit, else, LSB of red is replaced with c\_bit.\\
+If it gives 0, LSB of blue is replaced with c\_bit, else, LSB of red is replaced with c\_bit \cite{b2}.\\
 
 \subsection{Encryption}
 Stego\_image is first encrypted by the pr\_key\_src and then encrypted with the pub\_key\_dest.
 pr\_key\_src is used as a digital signature.
-pub\_key\_dest makes sure that only destination can decrypt it with it's private key.\\
+pub\_key\_dest makes sure that only destination can decrypt it with it's private key \cite{b2}.\\
 
 Similarly, location\_data is encrypted.\\
 
@@ -130,40 +130,15 @@ It's difficult to detect whether there is confidential\_data in an image.
 If an attacker somehow gets encrypted data, it's difficult to decrypt it.\\
 \section{Conclusion}
 LSB steganography has been improved in three ways -\\ \\
-1. Two way security with cryptography\\
+1. Two way security with cryptography.\\
 2. It's difficult for an attacker to predict the random pattern that is used to embed confidential\_data.\\
-3. PSNR from 53 to 56 \\
+3. PSNR is increased from 53 to 56.\\
 \section*{Acknowledgment}
 I would like to thank 'Technical Communication' staff and IIIT-Delhi (Indraprastha Institute of Information Technology).\\
-\section*{References}
-
-Please number citations consecutively within brackets \cite{b1}. The 
-sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
-number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
-the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
-
-Number footnotes separately in superscripts. Place the actual footnote at 
-the bottom of the column in which it was cited. Do not put footnotes in the 
-abstract or reference list. Use letters for table footnotes.
-
-Unless there are six authors or more give all authors' names; do not use 
-``et al.''. Papers that have not been published, even if they have been 
-submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
-that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
-Capitalize only the first word in a paper title, except for proper nouns and 
-element symbols.
-
-For papers published in translation journals, please give the English 
-citation first, followed by the original foreign-language citation \cite{b6}.
 
 \begin{thebibliography}{00}
-\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
+\bibitem{b1} S. M. Masud Karim, Md. Saifur Rahman, Md. Ismail Hossain, "A new approach for LSB based image steganography using secret key".  Computer and Information Technology (ICCIT), 2011 14th International Conference, 22-24 Dec. 2011, Dhaka, Bangladesh.\\
+\bibitem{b2} Xinyi Zhou, Wei Gong, WenLong Fu, LianJing Jin, "An improved method for LSB based color image steganography combined with cryptography". Computer and Information Science (ICIS), 2016 IEEE/ACIS 15th International Conference, 26-29 June 2016, Okayama, Japan.\\
 \end{thebibliography}
 
 \end{document}
