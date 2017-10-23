@@ -86,8 +86,8 @@ Finally, it is converted to a binary string '01100001, 01100010, 01100011'.\\
 Similarly, another binary string is produced for the confidential\_data.\\
 
 \subsection{Embedding}
-Each bit is taken from the confidential\_data and from the location\_data.
-Let them be c\_bit and l\_bit respectively.
+Each bit is taken from the confidential\_data and from the location\_data;
+let them be c\_bit and l\_bit respectively.
 c\_bit is embedded in one of the components of a pixel which is determined by l\_bit.\\
 
 \begin{figure}[H]
@@ -101,6 +101,13 @@ So, LSBs of green component are not replaced.\\
 A pixel is chosen in lexicographical order (row\_number, column\_number in lexicographical order).
 For a given l\_bit and c\_bit, l\_bit is XORed with LSB of green component.
 If it gives 0, LSB of blue is replaced with c\_bit, else, LSB of red is replaced with c\_bit \cite{b2}.\\
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{cover_image_vs_stego_image.png}
+  \caption{Left - Cover\_image, right - stego\_image \cite{b2}.}
+\end{figure}
+
+As you can see in Fig.2, it is difficult to distinguish between the left (before embedding confidential\_data) and right images (after embedding confidential\_data)
 
 \subsection{Encryption}
 Stego\_image is first encrypted by the pr\_key\_src and then encrypted with the pub\_key\_dest.
@@ -125,11 +132,6 @@ Convert confidential\_data to 8-bit ASCII values and finally to ASCII characters
 \subsection{PSNR (Peak Signal to Noise Ratio)}
 As name indicates, it is the ratio of signal and noise.
 Higher the PSNR lesser the noise in an image.\\
-
-\begin{figure}[H]
-  \includegraphics[width=\linewidth]{cover_image_vs_stego_image.png}
-  \caption{Left - Cover\_image, right - stego\_image \cite{b2}.}
-\end{figure}
 
 PSNR of traditional LSB based steganography techniques is around 53.
 This method gives a PSNR of around 56, better than traditional PSNR.\\  

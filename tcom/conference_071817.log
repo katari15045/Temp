@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.21)  23 OCT 2017 13:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.21)  23 OCT 2017 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -509,102 +509,102 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--104
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
-
- []
-
-
-Underfull \hbox (badness 2073) in paragraph at lines 115--117
-[]\OT1/ptm/m/n/10 Stego[]image is first de-crypted us-ing the pr[]key[]dest
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--117
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
-
- []
-
-
-Underfull \hbox (badness 2582) in paragraph at lines 120--123
-\OT1/ptm/m/n/10 col-umn[]number in lex-i-co-graph-i-cal or-der). For each bit
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--123
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
-
- []
-
 <cover_image_vs_stego_image.png, id=11, 433.62pt x 198.7425pt>
 File: cover_image_vs_stego_image.png Graphic file (type png)
 
 <use cover_image_vs_stego_image.png>
-Package pdftex.def Info: cover_image_vs_stego_image.png used on input line 130.
+Package pdftex.def Info: cover_image_vs_stego_image.png used on input line 106.
 
 (pdftex.def)             Requested size: 252.0pt x 115.50119pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--136
+Underfull \hbox (badness 10000) in paragraph at lines 113--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--142
+Underfull \hbox (badness 2073) in paragraph at lines 122--124
+[]\OT1/ptm/m/n/10 Stego[]image is first de-crypted us-ing the pr[]key[]dest
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--147
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--147
+Underfull \hbox (badness 2582) in paragraph at lines 127--130
+\OT1/ptm/m/n/10 col-umn[]number in lex-i-co-graph-i-cal or-der). For each bit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
 [2 <./cover_image_cum_confidential_data.png> <./cover_image_vs_stego_image.png>
 ]
-Underfull \hbox (badness 3525) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Underfull \hbox (badness 3525) in paragraph at lines 154--155
 \OT1/ptm/m/n/8 cryp-tog-ra-phy". Com-puter and In-for-ma-tion Sci-ence (ICIS), 
 2016
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
@@ -629,13 +629,13 @@ Here is how much of TeX's memory you used:
  7035 multiletter control sequences out of 15000+600000
  33007 words of font info for 62 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,7n,26p,310b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,7n,26p,305b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/bas
 e/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on conference_071817.pdf (3 pages, 265595 bytes).
+Output written on conference_071817.pdf (3 pages, 265899 bytes).
 PDF statistics:
  33 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
