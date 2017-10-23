@@ -1,6 +1,7 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{float}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 % \usepackage{algorithmic}
@@ -89,6 +90,11 @@ Each bit is taken from the confidential\_data and from the location\_data.
 Let them be c\_bit and l\_bit respectively.
 c\_bit is embedded in one of the components of a pixel which is determined by l\_bit.\\
 
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{cover_image_cum_confidential_data.png}
+  \caption{Left - Cover\_image, right - confidential\_data\_image \cite{b2}.}
+\end{figure}
+
 It is observerd that the human eye is most sensitive to the green component of the light \cite{b2}.
 So, LSBs of green component are not replaced.\\
 
@@ -119,6 +125,11 @@ Convert confidential\_data to 8-bit ASCII values and finally to ASCII characters
 \subsection{PSNR (Peak Signal to Noise Ratio)}
 As name indicates, it is the ratio of signal and noise.
 Higher the PSNR lesser the noise in an image.\\
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{cover_image_vs_stego_image.png}
+  \caption{Left - Cover\_image, right - stego\_image \cite{b2}.}
+\end{figure}
 
 PSNR of traditional LSB based steganography techniques is around 53.
 This method gives a PSNR of around 56, better than traditional PSNR.\\  
