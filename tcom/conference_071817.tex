@@ -86,17 +86,20 @@ Finally, it is converted to a binary string '01100001, 01100010, 01100011'.\\
 Similarly, another binary string is produced for the confidential\_data.\\
 
 \subsection{Embedding}
-Each bit is taken from the confidential\_data and from the location\_data;
-let them be c\_bit and l\_bit respectively.
-c\_bit is embedded in one of the components of a pixel which is determined by l\_bit.\\
 
 \begin{figure}[H]
   \includegraphics[width=\linewidth]{cover_image_cum_confidential_data.png}
   \caption{Left - Cover\_image, right - confidential\_data\_image \cite{b2}.}
 \end{figure}
 
+Grayscale image (Black and white) in Fig.1 is to be embedded in the color image to it's left.\\
+
+Each bit is taken from the confidential\_data and from the location\_data;
+let them be c\_bit and l\_bit respectively.
+c\_bit is embedded in one of the components of a pixel which is determined by l\_bit.\\
+
 It is observerd that the human eye is most sensitive to the green component of the light \cite{b2}.
-So, LSBs of green component are not replaced.\\
+So, LSB of the green component is not replaced.\\
 
 A pixel is chosen in lexicographical order (row\_number, column\_number in lexicographical order).
 For a given l\_bit and c\_bit, l\_bit is XORed with LSB of green component.
@@ -111,9 +114,11 @@ As you can see in Fig.2, it is difficult to distinguish between the left (before
 
 \subsection{Encryption}
 Stego\_image is first encrypted by the pr\_key\_src and then encrypted with the pub\_key\_dest.
-pr\_key\_src is used as a digital signature.
+Encrypting with pr\_key\_src is referred as a digital signature.
 pub\_key\_dest makes sure that only destination can decrypt it with it's private key \cite{b2}.\\
 
+\centerline{ pub\_key\_dest ( pr\_key\_src ( data ) ) }
+\leavevmode \\
 Similarly, location\_data is encrypted.\\
 
 Now, stego\_image along with location\_data is transferred to destination.
@@ -121,6 +126,9 @@ Now, stego\_image along with location\_data is transferred to destination.
 \subsection{Decrpytion}
 Stego\_image is first decrypted using the pr\_key\_dest and then with the pub\_key\_src.
 Now, the receiver has the decrypted stego\_image .\\
+
+\centerline{ pub\_key\_src ( pr\_key\_dest ( data ) ) }
+\leavevmode \\
 
 Similarly, decrypt the location\_data. \\
 \subsection{Extracting embedded data}
@@ -130,22 +138,21 @@ If it's 0, append the LSB of blue to the confidential\_data, else, append the LS
 
 Convert confidential\_data to 8-bit ASCII values and finally to ASCII characters.\\
 \subsection{PSNR (Peak Signal to Noise Ratio)}
-As name indicates, it is the ratio of signal and noise.
+As name indicates, it is the ratio of signal to noise.
 Higher the PSNR lesser the noise in an image.\\
 
-PSNR of traditional LSB based steganography techniques is around 53.
-This method gives a PSNR of around 56, better than traditional PSNR.\\  
+PSNR of traditional LSB based steganography techniques is around 53 db \cite{b1}.
+This method gives a PSNR of around 56 db, better than traditional PSNR.\\  
 \subsection{Security}
-It has two layers of security.
-First layer being steganography, second being cryptography.\\
+It has two layers of security - steganography and cryptography.\\
 
-It's difficult to detect whether there is confidential\_data in an image.
+It's difficult to detect confidential\_data that is embedded in an image.
 If an attacker somehow gets encrypted data, it's difficult to decrypt it.\\
 \section{Conclusion}
 LSB steganography has been improved in three ways -\\ \\
 1. Two way security with cryptography.\\
 2. It's difficult for an attacker to predict the random pattern that is used to embed confidential\_data.\\
-3. PSNR is increased from 53 to 56.\\
+3. PSNR is increased from 53 db to 56 db.\\
 \section*{Acknowledgment}
 I would like to thank 'Technical Communication' staff and IIIT-Delhi (Indraprastha Institute of Information Technology).\\
 
